@@ -344,3 +344,20 @@ button.close {
     text-align: justify;
     color: #7a7777;
 }
+
+.card-inferior {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(120, 119, 118);
+    border-color: rgb(120, 119, 118);
+    color: #fff;
+    font-size: 18px;
+}
+
+.card-inferior .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
