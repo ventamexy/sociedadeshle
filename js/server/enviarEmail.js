@@ -51,7 +51,7 @@ window.addEventListener("load", function() {
             let frmPreCalificacion = $(".frmPrecalificacion").serialize();
 
             let urlServidor = "https://empleosmexy.com/server/controllers/cEnviarEmail.php";
-            if ( window.location.host === "local.visas-mexy.com" ) {
+            if ( window.location.host === "local.creaciondesociedades.com" ) {
                 urlServidor = "http://local.empleosmexy.com/server/controllers/cEnviarEmail.php";
             }
 

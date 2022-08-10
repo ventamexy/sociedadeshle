@@ -361,3 +361,9 @@ button.close {
     justify-content: center;
     align-items: center;
 }
+
+.title-formulario-contacto {
+    font-weight: bold;
+    font-style: italic;
+    color: #123966;
+}
