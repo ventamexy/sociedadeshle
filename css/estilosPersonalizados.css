@@ -1,5 +1,6 @@
 body {
     overflow: auto;
+    word-wrap: break-word;
 }
 
 a {
@@ -366,4 +367,23 @@ button.close {
     font-weight: bold;
     font-style: italic;
     color: #123966;
+}
+
+
+/* Media querys */
+@media(max-width:384px) {
+
+    .contendor-secciones-video {
+        width: 100%!important;
+        justify-content: center!important;
+    }
+
+}
+
+@media(max-width:488px) {
+
+    .creacion-sociedades {
+        font-size: 2.5rem;
+    }
+
 }
