@@ -47,11 +47,15 @@ window.addEventListener("load", function() {
                 throw "El contenido del mensaje no puede ser vacío y debe de tener una longitud mínima de 200 caracteres y máxima de 3500.";
             } mensaje.removeClass("campoValidacion");
 
+            // --- Validación de la contestación del reCaptcha.
+            if ( grecaptcha.getResponse().length == 0 ) {
+                throw "Necesita solucionar el captcha para seguir con el proceso del envío del email.";
+            }
 
             let frmPreCalificacion = $(".frmPrecalificacion").serialize();
 
             let urlServidor = "https://empleosmexy.com/server/controllers/cEnviarEmail.php";
-            if ( window.location.host === "local.creaciondesociedades.com" ) {
+            if ( window.location.hostname === "local.creaciondesociedadeshle.com" ) {
                 urlServidor = "http://local.empleosmexy.com/server/controllers/cEnviarEmail.php";
             }
 
@@ -90,6 +94,7 @@ window.addEventListener("load", function() {
                         $(".btnEnviarPrecalificacion").attr({disabled:false});
                         $(".cargaSpinner").addClass("d-none");
 
+                        grecaptcha.reset();
                         addImageNotificacion(imgNotificacion, estadoEnvio);
 
                     }
@@ -111,6 +116,7 @@ window.addEventListener("load", function() {
             $(".btnEnviarPrecalificacion").attr({disabled:false});
             $(".cargaSpinner").addClass("d-none");
 
+            grecaptcha.reset();
             addImageNotificacion(imgNotificacion, estadoEnvio);
 
         }
